@@ -79,11 +79,13 @@ namespace MyNotebook
         {
             if (string.IsNullOrEmpty(toolStripTextBox1.Text))
             {
-                toolStripTextBox1.Focus();
-                return;
+                Print(PeopleManager.Search(""));
+            }
+            else
+            {
+                Print(PeopleManager.Search(toolStripTextBox1.Text));
             }
 
-            Print(PeopleManager.Search(toolStripTextBox1.Text));
             toolStripTextBox1.Focus();
         }
            
